@@ -8,7 +8,8 @@ from sklearn.preprocessing import StandardScaler
 
 MODEL_NAME = "Tuned Gradient Boosting"
 with open("model_features.pkl", "rb") as f:
-    model_features = pickle.load(f)
+    SELECTED_FEATURES = pickle.load(f)
+
 
 MODEL_PATH = "best_gb_model.pkl"      
 SCALER_PATH = "scaler.pkl"
@@ -99,3 +100,4 @@ if st.button("Predict Si Content", type="primary"):
 st.markdown("---")
 
 st.caption("Blast Furnace Si Prediction App | Built with Tuned Gradient Boosting")
+
